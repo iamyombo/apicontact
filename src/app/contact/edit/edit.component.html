@@ -1,0 +1,63 @@
+<p>edit works!</p>
+<div class="container">
+  <h1>Update Contact</h1>
+
+  <a href="#" routerLink="/contact/index" class="btn btn-primary">Back</a>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+      <div class="form-group">
+          <label for="firstname">First Name:</label>
+          <input
+              formControlName="firstname"
+              id="firstname"
+              type="text"
+              [(ngModel)]="contact.firstname"
+              class="form-control">
+          <div *ngIf="f['firstname'].touched && f['firstname'].invalid" class="alert alert-danger">
+              <div *ngIf="f['firstname'].errors && f['firstname'].errors['required']">First Name is required.</div>
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="lastname">Last Name:</label>
+        <input
+            formControlName="lastname"
+            id="lastname"
+            type="text"
+            [(ngModel)]="contact.lastname"
+            class="form-control">
+        <div *ngIf="f['lastname'].touched && f['lastname'].invalid" class="alert alert-danger">
+            <div *ngIf="f['lastname'].errors && f['lastname'].errors['required']">Last Name is required.</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+          formControlName="email"
+          id="email"
+          type="text"
+          [(ngModel)]="contact.email"
+          class="form-control">
+      <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+          <div *ngIf="f['email'].errors && f['email'].errors['required']">email is required.</div>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label for="company_id">Company Name:</label>
+    <input
+        formControlName="company_id"
+        id="company_id"
+        type="text"
+        [(ngModel)]="contact.company_id"
+        class="form-control">
+    <div *ngIf="f['company_id'].touched && f['company_id'].invalid" class="alert alert-danger">
+        <div *ngIf="f['company_id'].errors && f['company_id'].errors['required']">Company Name is required.</div>
+    </div>
+</div>
+
+      <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit Update</button>
+  </form>
+</div>

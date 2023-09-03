@@ -1,27 +1,43 @@
-# Apicontact
+# APICONTACT ANGULAR FRONTEND for  MGF PHP API BACKEND
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+![Alt text](image.png)
 
-## Development server
+## SETUP REQUIREMENTS - Install the follow;
+* Node Js LTS 18.* 
+* NPM 9.8.1
+* Angular CLI 16.2.* 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## DEPLOYMENT STEP 1
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Ensure that your have setup the backend api which is *** MGF PHP API BACKEND *** reference the readme file for the install of requirement for the backend.
 
-## Build
+* Then download or PULL the the folder " apicontact " to you local system 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## DEPLOYMENT STEP 2 - Navigate to apicontact folder root
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* CMD to the folder " apicontact " root at command prompt. ***C:\~\apicontact>***
 
-## Running end-to-end tests
+## DEPLOYMENT STEP 3 - Then RUN the following commands
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+***Ensure that your Backend is UP and RUN***
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+*  C:\~\apicontact> npm install
+
+*  C:\~\apicontact> ng serve --0 
+
+        ***IF YOU ARE PROMPT THAT*** port 4200 is busy, RESPOND WITH yes TO PROCEED.
+
+
+## DEPLOYMENT STEP 4
+
+* Navigate to API URL: `http://localhost:4200/contact/index`
+* IF YOUR PORT NUMBER CHANGES, TAKE NOT TO ADJUST YOUR THE API URL
+
+
+## FOR SUPPORT
+* If you run into any challenges during setup, contact me via ***iamyombo@outlook.com*** or Call#
+
+*** Thank You! ***
