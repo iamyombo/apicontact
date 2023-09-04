@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ContactModule } from './contact/contact.module';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { ContactModule } from './contact/contact.module';
     BrowserModule,
     AppRoutingModule,
     ContactModule,
-    HttpClientModule
+    HttpClientModule,
+    AgGridModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,6 +11,7 @@ import {Contact} from './contact'
 })
 export class ContactService {
 
+
    private apiURL = "http://localhost/contactapi/src/api/contact";
 
    httpOptions = {
@@ -20,6 +21,9 @@ export class ContactService {
   }
 
   constructor(private httpClient: HttpClient) { }
+
+
+
 
   /**
    * getAll(); To list all active contacts in the list.
@@ -120,6 +124,22 @@ undodel(id:number){
       catchError(this.errorHandler)
     )
   }
+
+
+   /**
+   * checkBin(); To list all contact in the recycle bin
+   *
+   * @return response()
+   */
+   checkBin(): Observable<any> {
+
+    return this.httpClient.get(this.apiURL + '/checkbin.php')
+
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }
+
 
 
 

@@ -33,9 +33,10 @@ export class EditComponent implements OnInit {
    * @return response()
    */
   ngOnInit(): void {
-    this.ContactID = this.route.snapshot.params['ContactId'];
+    this.ContactID = this.route.snapshot.params['contactId'];
     this.contactService.single(this.ContactID).subscribe((data: Contact)=>{
       this.contact = data;
+      console.log(this.contact = data );
     });
 
     this.form = new FormGroup({
@@ -44,6 +45,9 @@ export class EditComponent implements OnInit {
       email: new FormControl('', [Validators.required]),
       company_id: new FormControl('', Validators.required)
     });
+
+
+
   }
 
 

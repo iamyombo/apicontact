@@ -9,7 +9,21 @@ import { ContactService } from '../contact.service';
 })
 export class IndexComponent implements OnInit {
 
-  contacts: Contact[] =[];
+
+columnDefs = [
+    {headerName: 'Make' },
+    {headerName: 'Model' },
+    {headerName: 'Price'}
+];
+
+rowData = [
+    { make: 'Toyota', model: 'Celica', price: 35000 },
+    { make: 'Ford', model: 'Mondeo', price: 32000 },
+    { make: 'Porsche', model: 'Boxter', price: 72000 }
+];
+
+contacts: Contact[] =[];
+
 
   constructor(public contactService: ContactService) {}
 
@@ -26,7 +40,7 @@ export class IndexComponent implements OnInit {
   }
 
    /**
-   * Iniciating soft deletion based on selected contact id. with the method "deleteContact"
+   * soft deletion based on selected contact id. with the method "deleteContact"
    *
    * @return response()
    */

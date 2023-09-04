@@ -11,6 +11,8 @@ import { LocateComponent } from './locate/locate.component';
 import { BylocateComponent } from './bylocate/bylocate.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AgGridModule } from 'ag-grid-angular';
+
 
 
 
@@ -28,7 +30,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ContactRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgGridModule,
+
   ]
 })
 export class ContactModule { }

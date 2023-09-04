@@ -10,8 +10,12 @@ import { Contact } from '../contact';
 })
 export class ViewComponent implements OnInit {
 
-  ContactID!: number;
+  id!: number;
   contact!: Contact;
+
+
+
+
 
 
   constructor(
@@ -19,6 +23,7 @@ export class ViewComponent implements OnInit {
     public contactService: ContactService,
     private route: ActivatedRoute,
     //private route: Router
+
      ) {}
 
     /**
@@ -28,10 +33,15 @@ export class ViewComponent implements OnInit {
    */
 
  ngOnInit(): void {
-    this.ContactID = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['contactId'];
 
-    this.contactService.single(this.ContactID).subscribe((data: Contact)=>{
-      this.contact = data;
+    //console.log(this.id );
+
+    this.contactService.single(this.id).subscribe((data: Contact)=>{
+
+       this.contact = data;
+
+       console.log(this.contact = data );
     });
   }
 
